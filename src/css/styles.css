@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; 
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;  
+    user-select: none;  
+    cursor:none;
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #4a78b9 0%, #23292e 70%, #000000 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.starry-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+
+header {
+    width: 100%;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.logo p{
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+    justify-content: space-between;
+}
+
+.left-section {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+h2 {
+    font-size: 2.0rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%; 
+}
+
+label {
+    color: white;
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+input {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #ccc;
+    color:white;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: transform 0.2s ease-in; 
+
+}
+
+.forgot-and-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px; 
+}
+
+.forgot-password {
+    color: #b0b0b0;
+    font-size: 1.0rem;
+    text-decoration: none; 
+    transition: transform 0.2s ease-in; 
+}
+
+.forgot-password:active {
+    transform: scale(0.80); 
+}
+
+.login-button {
+    background-color: #7ba459;
+    border: 3px solid #37633a;
+    padding: 12px 70px; 
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in; 
+}
+
+.login-button:active {
+    transform: scale(0.80); 
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    color: #b0b0b0;
+    width: 50%;
+}
+
+.divider hr {
+    flex: 1;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divider span {
+    margin: 0 15px;
+}
+
+.google-button {
+    background-color: white;
+    border: none;
+    padding:15px; 
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+    width: 50%;
+    justify-content: center;
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in; 
+}
+
+.google-button img {
+    width: 18px;
+    margin-right: 8px;
+}
+
+.google-button:active {
+    transform: scale(0.90); 
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.button-group {
+    display: flex; 
+    justify-content: space-around;
+    width: 40%;
+}
+
+
+.apple-button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 60px; /* Assurez-vous que largeur et hauteur sont identiques pour un rond parfait */
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre l'image horizontalement et verticalement */
+    border-radius: 50%; /* Ceci assure que le bouton reste rond */
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #ccc; /* Correction pour ajouter la bordure */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+.apple-button img {
+    width: 24px; /* Ajustez la taille de l'image selon votre besoin */
+    margin: 0; /* Supprimer la marge droite pour centrer l'image */
+}
+
+.apple-button:active {
+    transform: scale(0.90); 
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.sign-up-button {
+    background-color: rgb(71, 71, 71);
+    border: none;
+    width: 60px; /* Assurez-vous que largeur et hauteur sont identiques pour un rond parfait */
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre l'image horizontalement et verticalement */
+    border-radius: 50%; /* Ceci assure que le bouton reste rond */
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #ccc; /* Correction pour ajouter la bordure */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+.sign-up-button img {
+    width: 24px; 
+    margin: 0; /* Supprimer la marge droite pour centrer l'image */
+}
+
+.sign-up-button:active {
+    transform: scale(0.90); 
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.right-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 50%; 
+    display: flex;
+}
+
+
+.globe-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+}
+
+.world-image {
+    width: 100%; 
+    height: auto;
+}
+
+.profile-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-image {
+    position: absolute;
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: top 0.5s ease-in-out;
+
+}
+
+#profile1 {
+    top: 18%;
+    left: 20%;
+}
+
+#profile2 {
+    top: 45%;
+    left: 55%; 
+}
+
+#profile3 {
+    top: 70%; 
+    left: 35%;
+}
+
+footer {
+    width: 100%;
+    font-weight: 100;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px; 
+    color: #ffffff; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+label {
+    margin-right: 10px; 
+    color: #ffffff; 
+    font-size: 1.1rem;
+}
+
+select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #fff; 
+    color: #000; 
+}
+
+.language-selector {
+    font-size: 1.1rem;
+    color: white;
+    background-color: #00000000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.error-message {
+    color: #e74c3c; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.error-message i {
+    margin-right: 10px; 
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
